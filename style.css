@@ -1,0 +1,42 @@
+/* body {
+
+} */
+
+header {
+  display: flex;
+  align-items: center;
+}
+
+img {
+  width: 25%;
+  height: auto;
+}
+
+hr {
+  color: red;
+}
+
+h1, h2 {
+  font-size: 5vw;
+  text-align: center;
+  margin: 5px;
+}
+
+h2 {
+  font-size: 3vW;
+  font-family:'Arial Narrow'
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.palkki {
+  display: inline-flex;
+  flex-direction: column; 
+  width: 30%;
+}
+
+
+

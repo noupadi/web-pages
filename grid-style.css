@@ -1,0 +1,609 @@
+/* 
+
+ELEMENTS THAT STAY THE SAME
+
+*/
+/*  */
+body, footer {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    min-width: 450px;
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    font-size: large;
+}
+
+em {
+    font-family: monospace;
+}
+
+a {
+    text-decoration: none;
+    color: inherit
+}
+
+/*  TOP BANNER STAYS THE SAME*/
+
+header {                    
+    display: flex;
+    padding: 5px;
+    background-color:#20954e;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 2px 3px #146133;
+}
+
+#headings {
+    display: flex;
+    width: 80%;
+    justify-content: center;
+}
+
+.picture {                  
+    width: min(20%, 150px);      
+}
+
+.picture img {            
+    width: 80%;
+}
+        /*
+             ____________________
+            |                    |
+            |    headings        |
+            |____________________|
+
+        */
+
+        h1 {
+            letter-spacing: 0.5ch;
+            font-style: italic;
+            text-shadow: 2px 2px 3px #0c2c19;
+        }
+
+        h2 {
+            font-size: larger;
+            text-decoration: underline;
+        }
+
+        h3 {
+            font-size: large;
+        }
+
+        h4 {
+            font-size: x-small;   
+        }
+
+        h1, h2 {
+            color:azure;
+        }
+
+        /* p, h1, h2, h3 h4 {
+            background-color: transparent;
+        } */
+
+        h4 {
+            text-align: left;
+        }
+
+        
+/*    {MENU} and {return-up} BUTTON for NAV    */
+
+#menu  {
+    background-color: inherit;
+    border: none;
+    font-size: 25px; 
+    color: #5f097a;
+}
+
+#menu:hover {
+    background-color: #886d90;
+    animation: menu-button-animation alternate linear infinite 2s;
+}
+
+#menu-line {
+    width: 35px;
+    height: 5px;
+    background-color: rgb(77, 77, 77);
+}
+
+ /* NAVIGATION ALSO STAYS THE SAME REGARDLESS  */
+
+.fitting-nav {
+    margin-right: 14%;
+}
+
+#navigation {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+
+    height: 0px;
+    width: 330px;
+    
+    grid-template-columns: 70px 70px 70px 70px;
+    
+    column-gap: 15px;
+
+    margin: 10px auto 10px auto;
+    visibility: hidden;
+    transition: 1s;
+}
+
+.box {
+    box-shadow: 1px 1px 1px 2px #3f3342 ;
+    padding: 3px;
+    color: #886d90;
+    transition: 0.5s;
+    font-size: small;
+}
+
+.box:hover {
+    box-shadow: 1px 1px 2px 2px #3f3342;
+    background-color: #3f3342;
+    color: antiquewhite;
+}
+
+#box1, #box2, #box3, #box4 {
+    display: flex;  
+    width: 100%;
+    height: 100%;
+    border-radius: 75px;
+    justify-content: center;
+    align-items: center;
+}
+
+#box1 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+#box2 {
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+#box3 {
+    grid-column: 3/4;
+    grid-row: 1/2;
+}
+
+#box4 {
+    grid-column: 4/5;
+    grid-row: 1/2;
+}
+
+
+/*
+ ___________________
+|                   |
+|    GRID layout    |
+|___________________|
+
+        MAIN         
+
+ROOT OF ALL LAYOUTS
+
+*/
+
+#main-main, #contact-main {
+    display: grid;
+    grid-template-columns: 43% 43% 14%;
+    grid-template-rows: auto auto auto;
+    grid-row-gap: 2vh;
+}
+
+#section1, #section2, #section3 {
+    grid-column: 1/3;
+}
+
+#section1 {
+    grid-row: 1/2
+}
+#section2 {
+    grid-row: 2/3
+}
+
+#section3 {
+    grid-row: 3/4
+}
+
+#main-aside {
+    grid-column: 3/4;
+    grid-row: 1/3;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#main-aside #poster img {
+    width: 80%;
+    height: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#return-up {
+    text-align:center;
+    grid-column: 3/4;
+    grid-row: 3/4;
+}
+
+/* REST OF FOOTER LAYOUT lines 390 --> */
+
+#footer-grid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 3fr 200px;
+    grid-template-rows: 155;
+    background-color: #20954e;
+    /* position: fixed;
+    bottom: 0; */
+}
+
+#footer-grid #left, #footer-grid #right {
+    display: inline-flex;
+    align-items: center;
+    grid-row: 1/2;
+}
+
+#footer-grid #left {
+    grid-column: 1/3;
+}
+
+#footer-grid #right {
+    grid-column: 3/4;
+}
+
+iframe {
+    height: 80%;
+    width: 70%;
+    border-radius: 12.5%;
+}
+
+/*  Makes the content:
+                flexed :        Column
+                centered :      vert + hor
+                widht   :       70%           (This is changed based on the page)
+                styling:        Whatever
+*/
+
+.column {
+    display: flex;    
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    
+    width: 70%;
+    
+    border-radius: 2px;
+    padding:0 10px 0 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*
+ ____________________
+|     MAIN PAGE      |
+|   Section 1 and 2  |
+|____________________|
+
+*/
+
+.column p {
+    padding: 5px;
+    text-align: justify;
+}
+
+.first-letter {
+    font-size: xx-large;
+    font-weight: bold;
+    font-style: italic;
+}
+
+
+
+/* 
+ ___________________
+|     main          |
+|    Targets        |
+|_____list__________|
+
+*/
+
+#targets {
+    list-style-type: none;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.item {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.item p {
+    display: none;
+}
+
+.item:hover p {
+    display: inline-block; 
+    position: fixed;
+    background-color: rgb(47, 47, 47);
+    color: whitesmoke;
+    animation: popup-animation 15s ease-out;
+
+    max-width: 300px;
+    border-radius: 5px;
+}
+
+/*
+ _______________
+|               |
+|  CONTACT PAGE |
+|_______________| 
+
+        Contactpage will use same lay out with little fixes 
+        (Because of the content, explained in reflection) 
+*/
+
+#contact-main {
+    grid-template-rows: auto auto;
+}
+
+#contact-main #main-aside {
+    grid-row: 1/3;
+}
+
+#contact-main .column {
+    width: 85%;
+}
+
+#contact-main #section1 {
+    grid-column: 1/2;
+}
+
+#contact-main #section2 {
+    grid-column: 2/3    ;
+    grid-row: 1/3;
+}
+
+#contact-main #section3 {
+    grid-column: 1/3;
+    grid-row: 3/4;
+}
+
+#contact-main #section3 > * {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    width: 40%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#contact-main #section3 {
+    padding-bottom: 5px;
+    border-radius: 5px;
+}
+
+#contact-main #section3 h4 {
+    font-size: medium;
+    text-align: center;
+} 
+
+textarea {
+    height: min(150px, 20vh);
+}
+
+/* #contact-main #return-up {
+    grid-row: 2/3;
+} */
+
+
+/* ------------------------------------- */
+
+@media screen and (max-width:600px) { 
+
+    header {
+        grid-column: 1/3;
+    }
+
+    .column {
+        width: 85%;
+    }
+    
+    h1 {
+        font-size: 2.5vh;
+    }
+    
+    h2 {
+        font-size: 2vh;
+    }
+
+    /* CONTACTPAGE RESPONSIVE LAYOUT */
+
+    #contact-main {
+        grid-template-rows: auto auto auto;
+    }
+
+    #contact-main #section1 {
+        grid-column: 1/3;
+        grid-row: 1/2;
+        width: 100%;
+    }   
+
+    #contact-main #section2 {
+        grid-column: 1/3;
+        grid-row: 2/3;
+    }
+
+    #footer-grid {
+        font-size: 70%;
+    }
+}
+
+
+@keyframes popup-animation {
+    0%      {bottom: 0px;
+            left: 20%;
+            transform: rotate(0deg);
+        }
+    
+    10%     {bottom: 50vh;  
+            left: 20%;
+        }
+
+    90%     {bottom: 40vh;
+            left: 20%;
+            transform: scale(1.5);
+        }
+    
+    100%    {bottom: -50vh;
+            left: 20%;
+            transform: rotate(10deg);
+        }
+}
+
+@keyframes menu-button-animation {
+    100% {background-color: rgb(255, 255, 255);}
+}
+
+/* -------------------------------- */
+
+/* Styling the Body element i.e. Color,
+        Font, Alignment */
+
+/* Styling form-control Class */
+.form-control {
+    text-align: left;
+    margin-bottom: 25px;
+}
+
+/* Styling form-control Label */
+.form-control label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Styling form-control input,
+select, textarea */
+.form-control input,
+.form-control select,
+.form-control textarea {
+    border: 1px solid #777;
+    border-radius: 2px;
+    font-family: inherit;
+    padding: 10px;
+    display: block;
+    width: 95%;
+}
+
+/* Styling form-control Radio
+button and Checkbox */
+.form-control input[type="radio"],
+.form-control input[type="checkbox"] {
+    display: inline-block;
+    width: auto;
+}
+
+/* person introduction */
+
+.container {
+    position: relative;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #777;
+  }
+  
+  .container:hover .overlay {
+    opacity: 1;
+  }
+  
+  .text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  }
+
+  /* @font-face {
+    font-family: 'font1';
+    src: url('../fonts/font2/StraightRuler-vmd8E.ttf'), url('../fonts/font1/HeyAugust-qZ73q.otf');
+    font-style: italic;
+  } */
+
+/*
+ _______________________
+|                       |
+|  SOCIAL MEDIA         |
+|_______________________|
+*/
+
+/* .fa {
+    padding: 20px;
+    width: 50px;
+    text-align: center;
+    margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.fa-linkedin {
+    background: #007bb5;
+    color: white;
+}
+
+.fa-instagram {
+    background: #b72931;
+    color: white;
+}
+
+.fa-youtube {
+    background: #d90101;
+    color: white;
+} */
